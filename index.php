@@ -45,7 +45,6 @@ if(!empty($picture) && file_exists(PATH.$picture)) {
 			header('Content-Type: image/png');
 
 			imagepng($im);
-			var_dump(imagepng($im));
 			imagedestroy($im);
 		}
 
