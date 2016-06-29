@@ -1,5 +1,7 @@
 #Options +FollowSymlinks
 RewriteEngine On
+
 RewriteRule ^img - [L,NC]
+
 RewriteCond %{REQUEST_FILENAME} !index.php$
 RewriteRule ^(.*)$ index.php?p=$1 [L]
