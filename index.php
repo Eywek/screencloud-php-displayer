@@ -12,7 +12,7 @@ if(!empty($picture) && file_exists(PATH.$picture)) {
 	if(in_array(pathinfo(PATH.$picture, PATHINFO_EXTENSION), explode(',', ACCEPT_FILE_TYPES))) {
 
 		// For bots
-		if(stripos($_SERVER['HTTP_USER_AGENT'], 'bot')) {
+		if(stripos($_SERVER['HTTP_USER_AGENT'], 'bot') AND stripos($_SERVER['HTTP_USER_AGENT'], 'TelegramBot') === false) {
 
 			$size = getimagesize(PATH.$picture);
 			// Meta for Robots
